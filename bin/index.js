@@ -7,11 +7,9 @@ async function createReadme() {
     .prompt(questions)
     .then((input) => {
       let mdFile = buildReadme(input);
-      // console.info(mdFile);
       writeMdFile(input.title, mdFile);
     })
     .then((mdFile) => {
-      // console.info(mdFile);
       return mdFile;
     });
 }
