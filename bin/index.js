@@ -15,7 +15,8 @@ async function createReadme() {
 }
 
 async function writeMdFile(title, mdFile) {
-  const fileName = `${title.toLowerCase().split(' ').join('')}_README.md`;
+  const fileName = `README.md`;
+
   fs.writeFile(fileName, mdFile, (err) => {
     err ? console.log(err) : console.log('Your project readme has been created');
   });
